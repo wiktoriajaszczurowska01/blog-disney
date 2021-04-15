@@ -1,0 +1,119 @@
+nav{
+    width: 100%;
+    height: 60px;
+    background-color:rgba(165, 220, 241, 0.589); /*kolor paska itd*/
+    color: rgb(250, 249, 249);
+    font-weight: 600; /* grubość czcionki z google fonts*/
+    backdrop-filter: saturate(180%) blur(20px); /*nakłada filtr- blur- rozmycie tla*/
+    position: sticky;/*przykleja element*/
+    top: 0; /* jak pzykleić element od góry*/
+    /* nawigacja do strony:  */
+}
+a{ 
+    color: rgb(252, 248, 248);
+    text-decoration: none; /**/
+    /* przyciski*/
+}
+.wrap{
+    max-width: 1000px;
+    margin: 0 auto; /*margines zewnetrzny*/
+    display: flex; 
+    justify-content: space-between; /*rozstawienie elemntow poziomo*/
+    /*passek i jego wygląd */
+}
+.itemwrap{
+    display: flex; /*równomierne rozłożenie elementow obok siebie*/
+}
+@media(max-width:500px){
+    .itemwrap{
+        display: none;
+    }
+}
+.item{
+    padding: 0 30px; /* pierwsza cyfra góra/ dół, druga prawo/lewo*/
+    line-height: 60px;
+}
+.logo{ /*z kropka klasa, bez kropki element*/
+    padding: 0 30px;
+    line-height: 60px;
+}
+body{
+    margin: 0;
+    padding: 0; /* margines wewnetrzny*/
+}
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*łówny obrazek*/
+header{
+    margin-top: -60px;
+    width: 100%;
+    height: 550px;
+    background-image: url(ww.webp); /*wstawienie obrazka*/
+    background-repeat: no-repeat; /* jedno tło, bez powtórek*/
+    background-size: cover; /*wypełnienie całości obrazkiem*/
+    background-position: center ;/*pozyja djecia, odkąd się wyświetla*/
+}
+    /*strona*/
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.postlist{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 24px;
+}
+@media(max-width: 500px){
+    .postlist{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+    @media(max-width: 700px)and (min-width:500px){
+        .postlist{
+            grid-template-columns: repeat(2, 1fr);
+        }
+}
+article{
+    width: 100%;
+}
+article{
+    box-shadow: 0 10px 15px -3px #0000001a;
+    height: 100%;
+}
+.text>.category{
+    color: rgb(15, 81, 139);
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+.text>h3{
+    color: rgb(80, 77, 77);
+    font-size: 20px;
+    text-align: center;
+}
+.authortext>p{
+    color: rgb(59, 58, 58);
+    margin: 0;
+}
+.author{
+    display: flex;
+}
+.author>img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+
+}
+.text{
+    padding: 24px;
+}
+article>img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+main>h2{
+text-align: center;
+}
